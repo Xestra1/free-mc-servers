@@ -1,0 +1,38 @@
+help:
+  command: /help
+  type: TEXT
+  text:
+  - '&8&l&m--------&8&l[&4&lAnarchy&8&l]&8&l&m--------'
+  - '&4/mail &7to send some mail.'
+  - '&4/msg &7to talk to players.'
+  - '&4/suicide &7to die ingame.'
+  - '&4/rules &7to see the rules.'
+  - '&4/stats &7to see the stats.'
+  - '&4/seed &7to look at the seed.'
+  - '&8&l&m--------&8&l[&4&lAnarchy&8&l]&8&l&m--------'
+  permission-required: false
+rules:
+  command: /rules
+  type: TEXT
+  text:
+  - '&8&l&m--------&8&l[&4&lAnarchy&8&l]&8&l&m--------'
+  - '&7You must use a &4hacked client&7!'
+  - '&7No &4DDoSing&7 of any kind'
+  - '&7Dont leak any &4personal info&7!'
+  - '&8&l&m--------&8&l[&4&lAnarchy&8&l]&8&l&m--------'
+  permission-required: false
+stats:
+  command: /stats
+  type: TEXT
+  text:
+  - '&8&l&m--------&8&l[&4&lAnarchy&8&l]&8&l&m--------'
+  - '&8&l» &4%player_name%'
+  - '&7Time Played&8: &7%statistic_time_played%'
+  - '&7Kills&8: &7%statistic_player_kills%'
+  - '&7Deaths&8: &7%statistic_deaths%'
+  - '&8&l» &4Server'
+  - '&7TPS&8: &7%server_tps%'
+  - '&7Unique Joins&8: &7%server_unique_joins%'
+  - '&7Online&8: &7%server_online%&8/&7%server_max_players%'
+  - '&8&l&m--------&8&l[&4&lAnarchy&8&l]&8&l&m--------'
+  permission-required: false

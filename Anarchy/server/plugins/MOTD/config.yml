@@ -1,0 +1,21 @@
+# This is the server motd.
+Server-MOTD:
+  Line-1: '&8&l&m--------&8&l[&4&lAnarchy&8&l]&8&l&m--------'
+  Line-2: '&7Welcome to total &4&lAnarchy&7!'
+# The motd of the player when they join in.
+JoinGame-MOTD:
+  Enabled: true
+  # Check forum for placeholders.
+  # Supported for PlaceholderAPI placeholders.
+  Messages:
+  - ''
+# Server icon.
+Custom-Server-Icon:
+  # Set to true will load image from motd folder.
+  Enabled: false
+  # Make sure it's 64 x 64 pixels with png format.
+  Image: server-icon.png
+# The maximum players of the server.
+Server-Maximum-Players:
+  Modify: true
+  Maximum-Players: 200

@@ -1,0 +1,52 @@
+groups:
+  default:
+    options:
+      default: true
+      prefix: '&7'
+      rank: '1400'
+    permissions:
+    - -minecraft.command.me
+    - modifyworld.*
+    - essentials.afk.auto
+    - essentials.helpop
+    - essentials.ignore
+    - essentials.mail
+    - essentials.mail.send
+    - essentials.msg
+    - essentials.rules
+    - essentials.seen
+    - essentials.suicide
+    # - essentials.delhome
+    # - essentials.home
+    # - essentials.sethome
+    # - essentials.sethome.multiple
+    # - essentials.tpa
+    # - essentials.tpaccept
+    # - essentials.tpahere
+    # - essentials.tpdeny
+    # - essentials.tptoggle
+    - essentials.motd
+    - essentials.help
+    # - essentials.repair
+    inheritance: []
+  Owner:
+    permissions:
+    - '*'
+    options:
+      prefix: '&7[&9Owner&7]&9 '
+      rank: '1'
+  moderator:
+    permissions: []
+schema-version: 1
+users:
+  0e6871b0-1917-45ec-8718-8a241461ba73:
+    group:
+    - Owner
+    options:
+      name: Xestra
+    permissions:
+    - essentials.kit.builder
+    - essentials.kit.raider
+    - essentials.feed
+    - essentials.repair.all
+    - '*'

@@ -1,0 +1,237 @@
+General:
+  Prefix: "&9&lSurvival &8&l» "
+  NoPerms: "&7You don't have perms for that!"
+  LayoutNotFound: "&7There is no layout called %NAME%"
+  # This will be the replacement for the %DURATION% variable
+  TimeLayoutD: "%D%day(s) %H%h %M%min and %S%sec"
+  TimeLayoutH: "%H%hour(s) %M%min and %S%sec"
+  TimeLayoutM: "%M%min and %S%sec"
+  TimeLayoutS: "%S% seconds"
+  FailedFetch: "&7Could not fetch the UUID of %NAME%! See console for details."
+
+
+Ban:
+  Usage: "&7Usage &8\xbb &7&o/ban [Name] [Reason/@Layout]"
+  Done: "&7&o%NAME% &7was successfully banned!"
+  AlreadyDone: "&7&o%NAME% &7has already been banned!"
+  Exempt: "&7You are not able to ban &7&o%NAME%"
+  Layout:
+  - '%PREFIX% &7Permanently banned'
+  - '&7'
+  - '&7'
+  - "&7Reason &8\xbb &7%REASON%"
+  - '&7'
+  - '&8Unban application in TS or forum'
+  - "&eTS-Ip &8\xbb &7&ncoming soon"
+  - "&eForum &8\xbb &7&ncoming soon"
+  Notification:
+  - "&7&o%NAME% &7got banned by &e&o%OPERATOR%"
+  - "&7For the reason &o%REASON%"
+
+Ipban:
+  Usage: "&7Usage &8\xbb &7&o/banip [Name/IP] [Reason/@Layout]"
+  Layout:
+  - '%PREFIX% &7Permanently banned'
+  - '&7'
+  - '&7'
+  - "&7Reason &8\xbb &7%REASON%"
+  - '&7'
+  - '&8Unban application in TS or forum'
+  - "&eTS-Ip &8\xbb &7&ncoming soon"
+  - "&eForum &8\xbb &7&ncoming soon"
+  Notification:
+  - "&7&o%NAME% &7got banned by &e&o%OPERATOR%"
+  - "&7For the reason &o%REASON%"
+  IpNotCashed: "&7There is no saved IP for %NAME%!"
+
+Tempban:
+  Usage: "&7Usage &8\xbb &7&o/tempban [Name] [Xmo/Xd/Xh/Xm/Xs/#TimeLayout] [Reason/@Layout]"
+  MaxDuration: "&7You are not able to ban more than %MAX%sec"
+  Layout:
+  - '%PREFIX% &7Temporarily banned'
+  - '&7'
+  - '&7'
+  - "&7Reason &8\xbb &7%REASON%"
+  - "&7Duration &8\xbb &7%DURATION%"
+  - '&7'
+  - '&8Unban application in TS or forum'
+  - "&eTS-Ip &8\xbb &7&ncoming soon"
+  - "&eForum &8\xbb &7&ncoming soon"
+  Notification:
+  - "&7&o%NAME% &7got banned by &e&o%OPERATOR%"
+  - "&7For the reason &o%REASON%"
+  - "&7&oThis player got banned for &e&o%DURATION%"
+
+Tempipban:
+  Usage: "&7Usage &8\xbb &7&o/tempipban [Name/IP] [Xmo/Xd/Xh/Xm/Xs/#TimeLayout] [Reason/@Layout]"
+  MaxDuration: "&7You are not able to ban more than %MAX%sec"
+  Layout:
+  - '%PREFIX% &7Temporarily banned'
+  - '&7'
+  - '&7'
+  - "&7Reason &8\xbb &7%REASON%"
+  - "&7Duration &8\xbb &7%DURATION%"
+  - '&7'
+  - '&8Unban application in TS or forum'
+  - "&eTS-Ip &8\xbb &7&ncoming soon"
+  - "&eForum &8\xbb &7&ncoming soon"
+  Notification:
+  - "&7&o%NAME% &7got banned by &e&o%OPERATOR%"
+  - "&7For the reason &o%REASON%"
+  - "&7&oThis player got banned for &e&o%DURATION%"
+
+Mute:
+  Usage: "&7Usage &8\xbb &7&o/mute [Name] [Reason/@Layout]"
+  Done: "&7&o%NAME% &7was successfully muted!"
+  AlreadyDone: "&7&o%NAME% &7has already been muted!"
+  Exempt: "&7You are not able to mute &7&o%NAME%"
+  Layout:
+  - '%PREFIX% &7You are permanently muted'
+  - "&7Reason &8\xbb &7%REASON%"
+  Notification:
+  - "&7&o%NAME% &7got muted by &e&o%OPERATOR%"
+  - "&7For the reason &o%REASON%"
+
+Tempmute:
+  Usage: "&7Usage &8\xbb &7&o/tempmute [Name] [Xmo/Xd/Xh/Xm/Xs/#TimeLayout] [Reason/@Layout]"
+  MaxDuration: "&7You are not able to mute more than %MAX%sec"
+  Layout:
+  - '%PREFIX% &7You are muted for %DURATION%'
+  - "&7Reason &8\xbb &7%REASON%"
+  Notification:
+  - "&7&o%NAME% &7got muted by &e&o%OPERATOR%"
+  - "&7For the reason &o%REASON%"
+  - "&7&oThis player got muted for &e&o%DURATION%"
+
+Warn:
+  Usage: "&7Usage &8\xbb &7&o/warn [Name] [Reason/@Layout]"
+  Done: "&7&o%NAME% &7was successfully warned!"
+  Exempt: "&7You are not able to warn &7&o%NAME%"
+  Layout:
+  - '%PREFIX% &7You received a warning'
+  - "&7Reason &8\xbb &7%REASON%"
+  - '&7You have now &7&o%COUNT% &7warning(s) in total!'
+  Notification:
+  - "&7&o%NAME% &7got warned by &e&o%OPERATOR%"
+  - "&7For the reason &o%REASON%"
+
+Tempwarn:
+  Usage: "&7Usage &8\xbb &7&o/tempwarn [Name] [Xmo/Xd/Xh/Xm/Xs/#TimeLayout] [Reason/@Layout]"
+  MaxDuration: "&7You are not able to warn more than %MAX%sec"
+  Layout:
+  - '%PREFIX% &7You received a temp-warning'
+  - "&7Reason &8\xbb &7%REASON%"
+  - "&7It will pass in &8\xbb &7%DURATION%"
+  - '&7You have now &7&o%COUNT% &7warning(s) in total!'
+  Notification:
+  - "&7&o%NAME% &7got temp-warned by &e&o%OPERATOR%"
+  - "&7For the reason &o%REASON%"
+  - "&7This warning will pass in &o%DURATION%"
+
+Kick:
+  Usage: "&7Usage &8\xbb &7&o/kick [Name] [Reason/@Layout]"
+  Done: "&7&o%NAME% &7was successfully kicked!"
+  NotOnline: "&7&o%NAME% &7is not online!"
+  Exempt: "&7You are not able to kick &7&o%NAME%"
+  Layout:
+  - '%PREFIX% &7You got kicked'
+  - '&7'
+  - "&7Reason &8\xbb &7%REASON%"
+  - '&7'
+  Notification:
+  - "&7&o%NAME% &7got kicked by &e&o%OPERATOR%"
+  - "&7For the reason &o%REASON%"
+
+
+UnBan:
+  Usage: "&7Usage &8\xbb &7&o/unban [Name/IP]"
+  NotPunished: "&7&o%NAME% is not banned!"
+  Done: "&a&o%NAME% &7was successfully unbanned!"
+
+UnMute:
+  Usage: "&7Usage &8\xbb &7&o/unmute [Name]"
+  NotPunished: "&7&o%NAME% is not muted!"
+  Done: "&a&o%NAME% &7was successfully unmuted!"
+
+UnWarn:
+  Usage: "&7Usage &8\xbb &7&o/unwarn [ID] or /unwarn clear [Name]"
+  NotFound: "&7Could not find warning #%ID%"
+  Done: "&7Warn &a&o#%ID% &7was successfully deleted!"
+  Clear:
+    Empty: "&7&o%NAME% &7has no warnings!"
+    Done: "&7Cleared &a&o%COUNT% &7warnings"
+
+UnPunish:
+  Usage: "&7Usage &8\xbb &7&o/unpunish [ID]"
+  NotFound: "&7Could not find punishment #%ID%"
+  Done: "&7Punishment &a&o#%ID% &7was successfully deleted!"
+
+
+Banlist:
+  Usage: "&7Usage &8\xbb &7&o/banlist <Page>"
+  OutOfIndex: "&7There is no page %PAGE%!"
+  NoEntries: "&7&oThere are no entries"
+  Header:
+  - "%PREFIX% &7Banlist:"
+  - "&7&oPlayer/IP &8| &e&oDuration &8| &7&oBanned by"
+  - "&7&oType &8> &7&oReason"
+  - "&7"
+  Entry:
+  - "&8[&e%DATE%&8]"
+  - "&7%NAME% &8| &e%DURATION% &8| &7%OPERATOR%"
+  - "&7%TYPE% &8> &7&o%REASON%"
+  - "&7"
+  Footer: "&7Page &e&o%CURRENT_PAGE% &7of &e&o%TOTAL_PAGES% &8| &7Listed bans: &e&o%COUNT%"
+  PageFooter: "&7Use &e&o/banlist %NEXT_PAGE% &7to see the next page"
+
+History:
+  Usage: "&7Usage &8\xbb &7&o/history [Name/IP] <Page>"
+  OutOfIndex: "&7There is no page %PAGE%!"
+  NoEntries: "&7&oCould not find the history of %NAME% :("
+  Header:
+  - "%PREFIX% &7History for %NAME%:"
+  - "&7&oName &8| &e&oDuration &8| &7&oOperator"
+  - "&7&oType &8> &7&oReason"
+  - "&7"
+  Entry:
+  - "&8[&e%DATE%&8]"
+  - "&7%NAME% &8| &e%DURATION% &8| &7%OPERATOR%"
+  - "&7%TYPE% &8> &7&o%REASON%"
+  - "&7"
+  Footer: "&7Page &e&o%CURRENT_PAGE% &7of &e&o%TOTAL_PAGES% &8| &7Total entries: &e&o%COUNT%"
+  PageFooter: "&7Use &e&o/history %NAME% %NEXT_PAGE% &7to see the next page"
+
+Warns:
+  Usage: "&7Usage &8\xbb &7&o/warns [Name] <Page>"
+  OutOfIndex: "&7There is no page %PAGE%!"
+  NoEntries: "&7&o%NAME% has no warnings yet"
+  Header:
+  - "%PREFIX% &7Warnings for %NAME%:"
+  - "&7&oName &8| &e&oDuration &8| &7&oWarned by"
+  - "&7&o#ID &8> &7&oReason"
+  - "&7"
+  Entry:
+  - "&8[&e%DATE%&8]"
+  - "&7%NAME% &8| &e%DURATION% &8| &7%OPERATOR%"
+  - "&7&l#%ID% &8> &7&o%REASON%"
+  - "&7"
+  Footer: "&7Page &e&o%CURRENT_PAGE% &7of &e&o%TOTAL_PAGES% &8| &7Active warnings: &e&o%COUNT%"
+  PageFooter: "&7Use &e&o/warns %NAME% %NEXT_PAGE% &7to see the next page"
+
+ChangeReason:
+  Usage: "&7Usage &8\xbb &7&o/change-reason [ID or ban/mute USER] [New reason]"
+  Done: "&7Punishment &a&o#%ID% &7has successfully been updated!"
+  NotFound: "&7Sorry we have not been able to find this punishment"
+
+Check:
+  Usage: "&7Usage &8\xbb &7&o/check [Name]"
+  Header: "&7Checking &e&o%NAME%"
+  UUID: "&7UUID &8\xbb &7%UUID%"
+  IP: "&7IP &8\xbb &7%IP%"
+  Geo: "&7Country &8\xbb &7%LOCATION%"
+  Mute: "&7Muted &8\xbb &7%DURATION%"
+  MuteReason: "  &7Reason &8\xbb &7%REASON%"
+  Ban: "&7Banned &8\xbb &7%DURATION%"
+  BanReason: "  &7Reason &8\xbb &7%REASON%"
+  Warn: "&7Warns &8\xbb &7%COUNT%"
+  NotFound: "&7Sorry we have not been able to find %NAME%"

@@ -1,0 +1,5 @@
+&8&l&m--------&8&l[&4&lAnarchy&8&l]&8&l&m--------
+&7Welcome &4{PLAYER}&7!
+&4/Help &7to get some help
+&4/Rules &7to see the rules
+&8&l&m--------&8&l[&4&lAnarchy&8&l]&8&l&m--------

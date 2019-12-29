@@ -1,0 +1,5 @@
+&7
+&9&lSurvival
+&9/help &8&l- &7to get some help
+&9/rules &8&l- &7to view rules
+&7
