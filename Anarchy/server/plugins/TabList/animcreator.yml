@@ -1,7 +1,5 @@
-# Animations with unlimited names & texts.
 animations:
   tablist:
-    # Text changing interval in milliseconds (ticks).
     interval: 60
     texts:
     - "&b&lTabList"

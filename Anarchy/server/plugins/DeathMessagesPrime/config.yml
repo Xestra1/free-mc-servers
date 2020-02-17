@@ -1,221 +1,42 @@
-#     ....    .   .   ....
-#    .   .   .. ..   .   .
-#   .   .   . . .   ....
-#  .   .   .   .   .
-# ....    .   .   .      
-# DeathMessagesPrime Configuration File
-# SAVE THIS FILE AS UTF-8!!!! (without BOM)
-# Your text editor should support it. (Windows Notepad does probably not work)
-
-# Configuration version, do not change this unless you want your config to be 
-# reset.
 config-version: 47
-
-# World groups.
-# If a world is in a group, and a death occurs there, the appropriate death 
-# message will be shown in rest of the worlds in that same group too.
-# 
-# If _enabled is false, this feature is disabled. Instead, the death message 
-# behavior will be specified with per-world-messages.
-#
-# per-world-messages must be enabled to make world-groups work!
 world-groups:
   _enabled: true
   world:
     - world
     - world_nether
     - world_the_end
-  
-# Following players will never have visible death messages.
-# ENTER UUIDs UNDER THIS LIST. To get an UUID of an online player, use  
-# /dmsg uuid player_name.  
-# Default: (empty)
 player-blacklist: 
-# - '00000000-0000-0000-0000-000000000000'
-  
-# List worlds, where death messages from PvP are not recorded, here.
-# Default: (empty)
 worlds-no-pvp-death-messages:
-# - world2
-
-# List worlds, where death messages from anything else than PvP are not 
-# recorded, here.
-# Default: (empty)
 worlds-no-natural-death-messages:
-# - world2
-
-# List worlds, where death messages are only shown to the killer and the 
-# victim, here.
-# Default: (empty)
 worlds-private-pvp-death-messages:
-# - world3
-
-# List worlds, where death messages are only shown to the player that died here.
-# Default: (empty)
 worlds-private-natural-death-messages:
-# - world3
-
-# Worlds with maximum radius (in blocks) for death messages, assumed infinite 
-# if world is not present.
-# Should a world have a death message radius, the messages will never be shown 
-# to players in any other world.
 worlds-death-message-radius:
-    #world: 10 
-
-# Similar to the above, but this only controls PVP messages (not natural
-# death messages). If both are set, the above worlds-death-message-radius
-# will affect the natural messages and this one will affect the PVP messages.
-# In order to only have a PVP message radius: add the world here only.
-# In order to only have a natural message radius: add the world under
-#          both options and set it to -1 here.
 worlds-pvp-death-message-radius:
-    #world: 10 
-    
-# If a player dies over death-count times within death-interval seconds,
-# death messages from that player will be hidden for death-cooldown seconds.
-# If death-reset is true, every hidden death message resets the cooldown.
-# Default: 3
 cooldown-death-count: 3
-# Default: 10
 cooldown-death-interval: 10
-# Default: 10
 cooldown-death-cooldown: 10
-# Default: false
 cooldown-death-reset: false
-
-# Show debug information upon death, useful for determining plugin conflicts, 
-# etc.
-# Default: false
 debug: false
-
-# Show death messages in all worlds, if false. Needs to be true in order to 
-# worldgroups to function.
-# Default: true
 per-world-messages: true
-
-# Death message compatibility: set the message as normal, until HIGHEST,
-# when it is emptied.
-# Use this if any conflicts arise.
-# Default: true
 death-message-compat-mode: true
-
-# Whether to use DMP broadcasting if a custom death message is set by
-# another plugin.
-# Default: false
 death-message-conflict-broadcast: false
-
-# Whether to enable namedmob messages. If disabled, namedmob messages
-# will not be shown and will be replaced with mob.
-# Default: true
 death-message-enable-namedmob: true
-
-# Show the rarity of items in the %weapon_name% and %weapon% tags.
-# (This affects the text colors and formatting for some items, such
-# as enchanted ones.)
-# Default: true
 death-message-show-rarity: true
-
-# Allows applying item flags on items that appear in death messages.
-# Note that this feature only works on Minecraft 1.8 and above.
-# Possible flags are documented under https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/ItemFlag.html
 death-message-item-flags:
-# - HIDE_ATTRIBUTES
-# - HIDE_ENCHANTS
-
-# Heart compatibility mode: use mob instead of namedmob when the mob name 
-# contains heart characters.
-# Designed for mob health bar plugins, et cetera.
-# Enable this if death messages have mob names be a row of hearts representing 
-# health.
-# Default: false
 heart-compat-mode: false
-
-# If the mob name contains any of the following characters and 
-# heart-compat-mode is enabled, the default mob name is displayed. You can add 
-# characters if the health bar is still visible (copy the character from the 
-# death message logs) or remove them at will.
 heart-characters: "♡♥❤■"
-
-# Broadcast death message to console.
-# none: Do not print death message in console.
-# normal: Print the DeathMessagesPrime message in console.
-# verbose: Print a verbose message, including coordinates, and other info.
-# Verbose is useful for debugging
-# Default: normal
 console-death-message: normal
-
-# Clean prefix/suffix from messages printed in the console, 
-# ignored if console-death-message is not normal
-# Default: false
 console-death-message-strip-prefix: false
-
-# Clean color codes from messages printed in the console, 
-# ignored if console-death-message is not normal
-# Default: false
 console-death-message-strip-colors: false
-
-# Displays the death message in the console even if the world has disabled
-# death messages or set them to private. 
-# Default: true
 console-death-message-even-if-disabled: true
-
-# The priority for the listener. Set to lower value if there are any conflicts 
-# with plugins that provide their own death message systems.
-# In order from higher to lower: HIGHEST, HIGH, NORMAL, LOW, LOWEST
-# MONITOR is UNSUPPORTED - do not use it, as it causes conflicts and may
-# mess with plugins using the API.
-# Default: HIGH
 death-listener-priority: HIGH
-
-# Whether to show the custom weapon death messages (ZombieCustom for example)
-# on all weapons (true), or only on weapons with custom names (false).
-# Default: false
 show-custom-death-msg-on-all-weapons: false
-
-# THIS FEATURE IS NOT IMPLEMENTED RIGHT NOW, AS THE API DOES NOT SUPPORT
-# MODIFYING PET DEATH MESSAGES.
-# Whether to show death messages for tamed and named pets.
-# (true is the vanilla Minecraft behavior)
-# Default: true
 show-named-pet-death-messages: true
-
-# Messages for enabling and disabling death messages using /toggledeathmsg
 death-messages-hidden: "&a[DMP] &aOthers' death messages will now be HIDDEN"
 death-messages-shown: "&a[DMP] &aOthers' death messages will now be SHOWN"
-
-# Here are the actual death messages. They are as a list, so you can add as 
-# many as you want, and the plugin will support it. Color codes in format &0-&f 
-# and &k-&r are supported.
-#
-# %player% represents the player's name.
-# %name% represents the player's display name.
-# %killer% represents the killer player (in PvP reasons), or 
-#          pursuing mob (in DrowningMob etc. reasons) (mob names can be 
-#          changed in mob-names section).
-# %killer2% represents the killer player's display name in PvP reasons only.
-# %plrtag% represents the dead player's username with entity tooltip.
-# %victim% represents the dead player's display name with entity tooltip.
-# %entity% represents the killer's display name with entity tooltip.
-# %weapon_name% represents the weapon name.
-# %weapon% represents the weapon name (including the tooltip).
-# %world% represents the world name of the death.
-# %biome% represents the biome, where the death occurred. 
-# %x%, %y% and %z% represents the player death coordinates.
-# %distance% represents the distance between the player and the killer
-#            in blocks (if applicable)
-# %playerxp%, %playerlevel% represent the XP and level of the player.
-# %killerxp%, %killerlevel% are same for a killing *player*.
-#
-# Death messages for being killed by normally peaceful mobs also exist,
-# designed for custom maps, plugins or mods which may change functionality.
 death-messages: 
-  # Prefix of all death messages
   prefix: "&8&l[&4&lAnarchy&8&l] &7" 
-  # Suffix of all death messages
   suffix: "" 
-  # If you want a prefix / suffix only for PVP messages, uncomment these:
-  # prefix-pvp: "&a[&eD&a] &c"
-  # suffix-pvp: ""
   mob:
     Bat:
       - "%plrtag% was slain by Bat"
@@ -357,7 +178,7 @@ death-messages:
       - "%plrtag% was killed by Witch using magic"
     Wither:
       - "%plrtag% was slain by Wither"
-    WitherSpawnBoom: # Dies from wither spawn explosion
+    WitherSpawnBoom: 
       - "%plrtag% was blown up by Wither"
     WitherSkeletonMelee:
       - "%plrtag% was slain by Wither Skeleton"
@@ -379,7 +200,7 @@ death-messages:
       - "%plrtag% was slain by Zombie Villager using [%weapon%&f]"
     ZombieHorse:
       - "%plrtag% was slain by Zombie Horse"
-  namedmob: # For named mobs, use %killer% as mob
+  namedmob: 
     Bat:
       - "%plrtag% was slain by %killer%"
     BlazeMelee:
@@ -398,7 +219,7 @@ death-messages:
       - "%plrtag% was slain by %killer%"
     Creeper:
       - "%plrtag% was blown up by %killer%"
-    CreeperCharged: # charged Creeper
+    CreeperCharged: 
       - "%plrtag% was blown up by %killer%"
     Dolphin:
       - "%plrtag% was slain by %killer%"
@@ -522,7 +343,7 @@ death-messages:
       - "%plrtag% was killed by %killer% using magic"
     Wither:
       - "%plrtag% was slain by %killer%"
-    WitherSpawnBoom: # Dies from wither spawn explosion
+    WitherSpawnBoom: 
       - "%plrtag% was blown up by %killer%"
     WitherSkeletonMelee:
       - "%plrtag% was slain by %killer%"
@@ -555,11 +376,11 @@ death-messages:
       - "%plrtag% was impaled by %killer%"
     PlayerTridentCustom:
       - "%plrtag% was impaled by %killer% using [%weapon%&f]"
-    PlayerFireball: # Just in case
+    PlayerFireball: 
       - "%plrtag% was fireballed by %killer%"
-    PlayerSnowball: # Just in case
+    PlayerSnowball: 
       - "%plrtag% was pummeled by %killer%"
-    PlayerProjectileCustom: # Bows, plugins like CrackShot
+    PlayerProjectileCustom: 
       - "%plrtag% was shot by %killer% using [%weapon%&f]"
     PlayerPotion:
       - "%plrtag% was killed by %killer% using magic"
@@ -572,7 +393,7 @@ death-messages:
       - "%plrtag% was blown up by %killer%"
     EnderCrystal:
       - "%plrtag% blew up"
-    Bed: # exploding beds
+    Bed: 
       - "%plrtag% was killed by Intentional Game Design"
     Cactus:
       - "%plrtag% was pricked to death"
@@ -580,9 +401,9 @@ death-messages:
       - "%plrtag% walked into a cactus whilst trying to escape %killer%"
     Anvil:
       - "%plrtag% was squashed by a falling anvil"
-    FallingBlock: # Only when a FallingBlock is modified to cause damage
+    FallingBlock: 
       - "%plrtag% was squashed by a falling block"
-    UnknownArrow: # arrow from unknown entity or source, /summon?
+    UnknownArrow: 
       - "%plrtag% was shot by arrow"
     DispenserArrow:
       - "%plrtag% was shot by arrow"
@@ -594,7 +415,7 @@ death-messages:
       - "%plrtag% drowned"
     DrowningKill:
       - "%plrtag% drowned whilst trying to escape %killer%"
-    PotionPoison: # Normally impossible
+    PotionPoison: 
       - "%plrtag% died"
     PotionWither:
       - "%plrtag% withered away"
@@ -620,25 +441,25 @@ death-messages:
       - "%plrtag% tried to swim in lava"
     LavaKill:
       - "%plrtag% tried to swim in lava while trying to escape %killer%"
-    Lightning: # Happens when struck by lightning, vanilla: FireTick/FireBlock
+    Lightning: 
       - "%plrtag% went up in flames"
     Starvation:
       - "%plrtag% starved to death"
     Suffocation:
       - "%plrtag% suffocated in a wall"
-    Cramming: # maxEntityCramming
+    Cramming: 
       - "%plrtag% was squished too much"
     CrammingKill:
       - "%plrtag% was squished too much"
     Void:
       - "%plrtag% fell out of the world"
-    VoidFall: # in DMP, if entity falls over y>=64 to the void
+    VoidFall: 
       - "%plrtag% fell from a high place and fell out of the world"
     VoidKill:
       - "%plrtag% didn't want to live in the same world as %killer%"
-    FallShort: # Fall distance 5 blocks or less, or ender pearl
+    FallShort: 
       - "%plrtag% hit the ground too hard"
-    FallLong: # Fall distance over 5 blocks
+    FallLong: 
       - "%plrtag% fell from a high place"
     FallLadder: 
       - "%plrtag% fell off a ladder"
@@ -658,7 +479,7 @@ death-messages:
       - "%plrtag% fell too far and was finished by %killer%"
     FallFinishKillWeapon:
       - "%plrtag% fell too far and was finished by %killer% using [%weapon%&f]"
-    FallExplosionKill: # FallKill caused by entity explosion
+    FallExplosionKill: 
       - "%plrtag% was blown from a high place by %killer%"
     FallLadderKill: 
       - "%plrtag% was shot off a ladder by %killer%"
@@ -668,21 +489,16 @@ death-messages:
       - "%plrtag% went off with a bang"
     Elytra: 
       - "%plrtag% experienced kinetic energy"
-    Suicide: # Some plugins may use this one, /suicide and /kill for example
+    Suicide: 
       - "%plrtag% died"
-    Melting: # Some plugins may use this one, orig. Snowmans + hot biomes
+    Melting: 
       - "%plrtag% died"
-    DryOut: # Some plugins may use this one, orig. fish outside water
+    DryOut: 
       - "%plrtag% died"
-    Custom: # Some plugins may use this one
+    Custom: 
       - "%plrtag% died"
   unknown: 
     - "%plrtag% died"
-  # if any custom plugins offer custom messages, add them below.
-  # for example: for tag "foo.bar", use
-  # foo:
-  #   bar:
-  #     - "foo.bar death message"
      
 mob-names:
   Bat: "Bat"
@@ -751,42 +567,6 @@ mob-names:
   ZombieVillager: "Zombie Villager"
 
 custom-mob-death-messages:
-  # The following attribute takes in regular expressions and checks top-down 
-  # whether the names of the mobs match them.
-  # If there is no list, as in [], the plugin will look up the message from 
-  # the normal death messages.
-  # If the list only has an empty message, the death message for that mob will 
-  # be hidden.
-  # To match color codes, use the § character instead of &. (This file must be 
-  # encoded in UTF-8)
-  # Examples:
-  #
-  # "_*": # match all mobs
-  #   - "%plrtag% was killed by a mob"
-  #
-  # "^[Ss]_*": # match all mobs beginning with S or s
-  #   - "%plrtag% was killed by a mob"
-  #
-  # "§cMy Custom Boss": [] # display normal messages for mobs named 
-  #                        # 'My Custom Boss' written in red
-  #
-  # "My Custom Boss": # match all mobs with name being 'My Custom Boss'
-  #   - "%plrtag% was killed by a boss"
-  #   - "%plrtag% was pummeled by a boss"
-  #
-  # "§aMy Custom Boss": # match all mobs with name being 'My Custom Boss' 
-  #                     # written in light green
-  #   - "%plrtag% was killed by a boss"
-  #   - "%plrtag% was pummeled by a boss"
-  #
-  # "_*My Custom Boss_*": # match all mobs with name containing 'My Custom Boss'
-  #   - "%plrtag% was killed by a boss"
-  #   - "%plrtag% was pummeled by a boss"
-  #
-  # !!!!!!!!!!!!!!!!!!!!!!!! IMPORTANT !!!!!!!!!!!!!!!!!!!!!!!!
-  #  IN REGEXES; ALL DOTS MUST BE REPRESENTED WITH UNDERSCORES
-  # !!!!!!!!!!!!!!!!!!!!!!!! IMPORTANT !!!!!!!!!!!!!!!!!!!!!!!!
-  #
   Melee:
     "_*": []
   Ranged:
@@ -819,10 +599,6 @@ custom-mob-death-messages:
     "_*": []
 
 custom-user-death-messages:
-  # Same deal here. The plugin checks from the actual user names of players.
-  # custom-user-death-messages is preferred over custom-player-death-messages:
-  # empty list here will pass to custom-player-death-messages before passing 
-  # through to normal death messages.
   Melee:
     "_*": []
   Ranged:
@@ -855,7 +631,6 @@ custom-user-death-messages:
     "_*": []
 
 custom-player-death-messages:
-  # Same deal here. The plugin checks from the display names of players.
   Melee:
     "_*": []
   Ranged:
@@ -888,48 +663,9 @@ custom-player-death-messages:
     "_*": []
 
 custom-biome-names:
-  # See https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/Biome.html.
-  # The key should be one from the list above, for example:
-  
-  # SAVANNA_ROCK: "Savanna Plateau"
-  
 custom-world-names:
-  # World name as the key and display name as the value.
-  
-  # "world": "World #1"
-  
 custom-messages-per-player:
-  # Add custom messages for players. Use the UUID as the key, then use a death 
-  # reason key with the list of messages.
-  # To get the UUID of an online player, use /dmsg uuid player_name
-  
-  # Will this override custom-mob-death-messages, custom-user-death-messages 
-  # and custom-player-death-messages?
   override: true
-  # also affects custom-messages-per-killer-player
-  
-  # "123e4567-e89b-12d3-a456-426655440000":
-  #   natural:
-  #     TNT:
-  #       - "A VIP player, %plrtag%, blew up!"  
-  
 custom-messages-per-killer-player:
-  # Same as above, but for killing players in PVP events.
-  # To get the UUID of an online player, use /dmsg uuid player_name
-  
-  # "123e4567-e89b-12d3-a456-426655440000":
-  #   natural:
-  #     TNTKill:
-  #       - "%plrtag% got blown up by a VIP player, %entity%!"  
-  
 custom-messages-per-world:
-  # Add custom messages for worlds. Use the world name as the key, then 
-  # use a death reason key with the list of messages.
-  # This has lesser priority than custom-messages-per-player,
-  # custom-messages-per-killer-player or others.
-  
-  # "world":
-  #   natural:
-  #     TNT:
-  #       - "A player, %plrtag%, blew up in the specific world!"  
   

@@ -1,38 +1,15 @@
-#-----------------------------------------------------------------------------------------------------------#
-#							  MyCommand Plugin config file (last update v5.5.0)								#
-#																											#
-#  					BukkitDev Help page : http://dev.bukkit.org/server-mods/mycommand/  					#
-#																											#
-# With the listener, you can disable completely plugin parts. Put true for active and false for deactive it #
-# The vehicle listener, it's used only for DETECTOR_RAIL Material.											#
-# The Move listener instead, it's used for WarmUps. 														#
-# DELAY_SEC in Signs and Block it's used for prevent the command floods. Put it on 0, for disable it.		#
-# The Economy function require the Vault plugin. Download it here : http://dev.bukkit.org/server-mods/vault/#
-#-----------------------------------------------------------------------------------------------------------#
 LISTENERS:
-  # Active this if you want use the /mycmd-blockset features.
   BLOCK_LISTENER: true
-  # This allow you to execute commands from the ChatListener, Example, without the slash / prefix.
   CHAT_LISTENER: false
-  # Turn this one on, to allow the execution of custom commands in-game. Basically the core of MyCommand
   CUSTOM_COMMANDS_GAME: true
-  # Use ConsoleListener to allow you execute custom commands from the console.
   CUSTOM_COMMANDS_CONSOLE: true
-  # Extra Listener, allows you to execute commands on some extra events, like death,join and someone else. Check playerevents.yml
   EXTRA_LISTENER: false
-  # Enable this if you want use the /mycmd-itemset feature.
   ITEM_LISTENER: true
-  # Active the move listener for cancel WARMUPs (only warm-up type command)
   MOVE_LISTENER: false
-  # Turn this one on, to allow you use /mycmd-npcs feature.
   NPCS_LISTENER: false
-  # This allow to use some place-holders for the bungee_cord proxy. Like reading the amount of players in a determinate server.
   PLUGIN_MESSAGE_LISTENER: false
-  # The Sign listener allow the use of [MyCmd] signs.
   SIGN_LISTENER: true
-  # The Vehicle listener it's used only for the DETECTOR_RAIL Material in block-set feature, and allows you to execute command when a player trigger the detector_rail.
   VEHICLE_LISTENER: false
-#Determinate how many $args can be typed in a command. (lower = faster)
 COMMANDS:
   MAX_ARGUMENTS: 9
 DEBUG:
@@ -69,7 +46,6 @@ BLOCKS:
     - STONE_PRESSURE_PLATE
     - OAK_PRESSURE_PLATE
     - DETECTOR_RAIL
-# MYSQL support for PlayerData's values only.
 MYSQL: 
   USE: false
   HOST: 'localhost'

@@ -1,8 +1,3 @@
-#-----------------------------------------------------------------------------------------------------------#
-#							   MyCommand Language config file (last update v5.4.2)							#
-#									Use & as color code ,and %s for variables								#
-#						BukkitDev Help page : http://dev.bukkit.org/server-mods/mycommand/					#
-#-----------------------------------------------------------------------------------------------------------#
 LANGUAGE:
   PREFIX: "&0[&6MyCmd&0]&r "
   ECONOMY_COST: "&6This command cost %s. New balance %s"

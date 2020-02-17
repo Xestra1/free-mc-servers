@@ -1,0 +1,13 @@
+# To-Do
+- Anarchy
+  - update jar
+    - not finished
+- Survival
+  - config clean up
+    - not finished
+  - update jar
+    - not finished
+- Factions
+  - Coming soon
+- Skyblock
+  - Coming soon
